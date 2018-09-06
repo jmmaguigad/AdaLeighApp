@@ -1,7 +1,7 @@
 {
-    "name": "AdaFramework",
+    "name": "AdaLeighApp",
     "description": "Project that is not using any framework",
-    "keywords": ["AdaFramework", "No Framework"],
+    "keywords": ["AdaLeighApp", "No Framework"],
     "license": "MIT",
     "authors": [
         {
