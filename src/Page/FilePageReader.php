@@ -2,7 +2,7 @@
 
 namespace AdaLeigh\Page;
 
-use InvalidArgumentException;
+// use InvalidArgumentException;
 
 class FilePageReader implements PageReader {
     private $pageFolder;
@@ -12,6 +12,13 @@ class FilePageReader implements PageReader {
     }
 
     public function readBySlug(string $slug) : string {
-        return 'I am a placeholder';
+        $path = "$this->pageFolder/$slug.md";
+
+        if (!file_exists($path)) {
+            throw new InvalidPageException($slug);
+        }
+    
+        return file_get_contents($path);        
+        // return 'I am a placeholder';
     }
 }

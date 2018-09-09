@@ -24,4 +24,11 @@ $injector->define('Mustache_Engine', [
     ],
 ]);
 
+$injector->define('AdaLeigh\Page\FilePageReader', [
+    ':pageFolder' => __DIR__ . '/../pages',
+]);
+
+$injector->alias('AdaLeigh\Page\PageReader', 'AdaLeigh\Page\FilePageReader');
+$injector->share('AdaLeigh\Page\FilePageReader');
+
 return $injector;
